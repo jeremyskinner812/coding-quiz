@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    
+    <div id="highscore"><a href="highscores.html">View HighScores</a></div>
+
+    <div id="timer">Time-left:<span id="timeleft"></span></div>
+
+    <main>
+        <section>
+            <div id="first-screen">
+                <h1>Coding Practice Quiz</h1>
+                <p>
+                    To test your knowledge of coding, give this timed quiz a try. Incorrect answers will take away time. Try to beat the highest score.
+                </p>
+                <button id="start-button">Start Quiz</button>
+            </div>
+        </section>
+
+        <section>
+            <div id="question">
+                <h2 id="question-title"></h2>
+                <div id="answers"></div>
+
+            </div>
+        </section>
+
+        <section>
+            <div id="results" class="hidden">
+                <h2>Results</h2>
+                <p>
+                    Your final score is <span></span>
+                </p>
+                <p>
+                    Enter your Initials here: <input type="text" id="initials"><button id="submit-score">Submit</button>
+                </p>
+
+            </div>
+        </section>
+
+        <section>
+            <div></div>
+        </section>
+
+
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
