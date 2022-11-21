@@ -17,7 +17,7 @@ a {
     right: 15px;
 }
 
-main {
+.cards {
     margin: 100px auto 0 auto;
 }
 
@@ -32,7 +32,7 @@ button {
 
 
 
-#first-screen {
+#first-screen, #question, #results {
     text-align: center;
     margin: auto;
     background-color: lightskyblue;

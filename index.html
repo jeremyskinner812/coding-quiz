@@ -11,9 +11,9 @@
     
     <div id="highscore"><a href="highscores.html">View HighScores</a></div>
 
-    <div id="timer">Time-left:<span id="timeleft"></span></div>
+    <div id="timer">Time:<span id="timeleft">0</span></div>
 
-    <main>
+    <main class="cards">
         <section>
             <div id="first-screen">
                 <h1>Coding Practice Quiz</h1>
@@ -25,7 +25,7 @@
         </section>
 
         <section>
-            <div id="question">
+            <div id="question" class="hidden">
                 <h2 id="question-title"></h2>
                 <div id="answers"></div>
 
@@ -36,7 +36,7 @@
             <div id="results" class="hidden">
                 <h2>Results</h2>
                 <p>
-                    Your final score is <span></span>
+                    Your final score is <span id="final-score"></span>
                 </p>
                 <p>
                     Enter your Initials here: <input type="text" id="initials"><button id="submit-score">Submit</button>
