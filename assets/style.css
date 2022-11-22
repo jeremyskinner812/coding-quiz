@@ -32,11 +32,15 @@ button {
 
 
 
-#first-screen, #question, #results {
+#first-screen, #question, #results, #card {
     text-align: center;
     margin: auto;
     background-color: lightskyblue;
     border: 5px solid black;
     max-width: 600px;
     border-radius: 10px;
+}
+
+li {
+    text-align: left;
 }

@@ -94,7 +94,7 @@ function finishQuiz() {
 
 function saveScore(){
     var initials = document.querySelector("#initials").value;
-    var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+    var highScores = JSON.parse(window.localStorage.getItem('highScores')) || [];
     var currentScore = {
         score: time,
         initials: initials,
