@@ -1,3 +1,5 @@
+
+// array of objects for questions and answers
 var questions = [
     {
         question: "Which built-in method returns the length of the string?",
@@ -33,6 +35,7 @@ var answers = document.querySelector("#answers")
 var questionWrapper = document.getElementById("question");
 var timerEl = document.getElementById("timeleft");
 
+// function  to start quiz and timer
 function startQuiz() {
     var firstScreenEL = document.getElementById('first-screen');
     firstScreenEL.style.display = "none";
@@ -43,11 +46,14 @@ function startQuiz() {
 
 };
 
+// function to hide start screen and render question with answer buttons
 function renderQuestions() {
     var currentQuestion = questions[questionIndex];
     var questionTitle = document.querySelector("#question-title");
     questionTitle.textContent = currentQuestion.question;
     answers.innerHTML = "";
+
+    // for loop to loop through questions array
     for (var i = 0; i < currentQuestion.choices.length; i++) {
         var questionChoice = currentQuestion.choices[i];
         var choiceButton = document.createElement("button");
@@ -58,6 +64,7 @@ function renderQuestions() {
 
 };
 
+// click event to see if question answered correctly
 function answerQuestion(event) {
     var buttonClick = event.target;
     if (buttonClick.value !== questions[questionIndex].answer) {
@@ -65,6 +72,7 @@ function answerQuestion(event) {
         if (time < 0) {
             time = 0;
         }
+        // incorrect answer deducts 10 seconds
         timerEl.textContent = time;
         window.alert("Incorrect :(");
         
@@ -83,6 +91,7 @@ function answerQuestion(event) {
 
 };
 
+// function to to end quiz, and render score
 function finishQuiz() {
     clearInterval(timerInterval);
     var resultsScreen = document.querySelector("#results");
@@ -92,6 +101,7 @@ function finishQuiz() {
     questionWrapper.setAttribute("class", "hidden");
 };
 
+// function to save score and initials to local storage and print to highscores
 function saveScore(){
     var initials = document.querySelector("#initials").value;
     var highScores = JSON.parse(window.localStorage.getItem('highScores')) || [];
@@ -107,6 +117,7 @@ function saveScore(){
 
 }
 
+// function to start timer counting down by 1
 function startTimer() {
       time--;
       timerEl.textContent = time;
@@ -118,7 +129,7 @@ function startTimer() {
 }
 
 
-
+// event listeners for click events
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 answers.addEventListener("click", answerQuestion);
 document.querySelector("#submit-score").addEventListener("click", saveScore);

@@ -1,9 +1,11 @@
+/* font styling and background for page */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 125%;
     background-color: lightgray;
 }   
 
+/* highscores link */
 a {
     margin-top: 15px;
     color:blue;
@@ -11,27 +13,31 @@ a {
     text-decoration: none;
 }
 
+/* timer position */
 #timer {
     position: absolute;
     top: 15px;
     right: 15px;
 }
 
+/* centering of cards */
 .cards {
     margin: 100px auto 0 auto;
 }
 
+/* styling for buttons */
 button {
     background-color: lime;
     border-radius: 5px;
 }
 
+/* hide divs */
 .hidden {
     display: none;
 }
 
 
-
+/* styling for cards */
 #first-screen, #question, #results, #card {
     text-align: center;
     margin: auto;
@@ -41,6 +47,7 @@ button {
     border-radius: 10px;
 }
 
+/* text align for highscores */
 li {
     text-align: left;
 }
